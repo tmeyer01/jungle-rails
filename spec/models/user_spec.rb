@@ -25,7 +25,7 @@ RSpec.describe User, type: :model do
 
 
     it 'validates attributes are valid' do
-      user = User.new(name: 'jimmy muscles',  password: 'pass', password_confirmation: 'pass', email: 'jimmymuscles@gmail.com')
+      user = User.new(first_name: 'jimmy', last_name: 'muscles',  password: 'pass', password_confirmation: 'pass', email: 'jimmymuscles@gmail.com')
       expect(user).to be_valid
     end
   
