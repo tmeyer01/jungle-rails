@@ -44,6 +44,11 @@ RSpec.describe User, type: :model do
         expect(authentic_user).to_not be(nil)
       end
 
+      it 'Valid when email has uppercase and spaces' do
+        user = User.create(first_name: 'jimmy', last_name: 'muscles',  password: 'pass', password_confirmation: 'pass', email: 'jimmymuscles@gmail.com')
+        authentic_user = User.authenticate_with_credentials(' jiMMymuscles@gmAil.com ', 'pass')
+        expect(authentic_user).to_not be(nil)
+      end
 
 
 
