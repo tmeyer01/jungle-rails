@@ -19,7 +19,7 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
 
 
   scenario "Show products in cart" do
-    gu
+   
     visit root_path
    
     expect(page).to have_css 'article.product'
